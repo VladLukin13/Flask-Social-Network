@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block style %}<link rel="stylesheet" href="{{url_for('static', filename='add_post.css')}}">{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <form action="#" method="post" class="add-post-form">
+            <h2>Добавить пост</h2>
+            <div class="form-group">
+                <label for="title">Название поста:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="content">Текс поста:</label>
+                <textarea id="content" name="content" rows="4" required></textarea>
+            </div>
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+
+{% endblock %}

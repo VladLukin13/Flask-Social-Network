@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f6fc; /* Light blue background */
+}
+
+.container {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #fff; /* White container background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+h1 {
+    color: #007bff; /* Blue heading color */
+}
+
+.username {
+    color: #007bff; /* Blue heading color */
+}
+
+
+.post {
+    background-color: #e7f2ff; /* Light blue post background */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.post h2 {
+    margin-top: 0;
+}
+
+.post small {
+    color: #666;
+}
+
+
+

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block style %}<link rel="stylesheet" href="{{url_for('static', filename='person.css')}}">{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="profile">
+      <h1>{{ current_user.username }}</h1>
+      <p>{{ current_user.email }}</p>
+      <button onclick="location.href='{{url_for('logout')}}'" class="logout-button">Выйти</button>
+
+
+    </div>
+
+    <div class="feed">
+      <div class="post">
+          {% for post in my_posts %}
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.content }}</p>
+              <a href="{{ url_for('delete_post', del_id=post.id) }}">Delete</a>
+          <button class="delete-post">Изменить</button>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

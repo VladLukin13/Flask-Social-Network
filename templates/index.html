@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block style %}<link rel="stylesheet" href="{{url_for('static', filename='posts.css')}}">{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Все пользователи</h1>
+        <div class="post">
+            <div>
+            {% for user in users %}
+                <h2 class="username">{{ user.username }}</h2>
+                <h4 class="email">{{ user.email }}</h4>
+                <h4 class="email">{{ user.id }}</h4>
+
+                <a href="{{ url_for('follow', username=user.username) }}">Добавить в друзья</a>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+

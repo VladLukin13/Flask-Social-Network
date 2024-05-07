@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}Social Network</title>
+    {% block style %}{% endblock %}
+    <link rel="stylesheet" href="{{url_for('static', filename='base.css')}}">
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <h1>Social Network</h1>
+            <nav>
+                <ul>
+                    {% if current_user.is_authenticated %}
+                        <li><a href="{{ url_for('index') }}">Пользователи</a></li>
+                        <li><a href="{{ url_for('posts') }}">Новости</a></li>
+                        <li><a href="{{ url_for('user_page') }}">Мой профиль</a></li>
+                        <li><a href="{{ url_for('friends') }}">Мой друзья</a></li>
+                        <li><a href="{{ url_for('new_post') }}">Добавить пост</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('login') }}">Войти</a></li>
+                        <li><a href="{{ url_for('register') }}">Регистрация</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+
+<div class="flash-message">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="message">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+</div>
+
+{% block body %}{% endblock %}
+</html>

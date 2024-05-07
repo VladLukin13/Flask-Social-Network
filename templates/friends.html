@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block style %}<link rel="stylesheet" href="{{url_for('static', filename='friends.css')}}">{% endblock %}
+{% block body %}
+<div class="container">
+    <h1>Мои друзья</h1>
+    <ul1>
+        <li1>
+            <div class="friend">
+                <div class="friend-info">
+                    {% for fr in friend %}
+                    <div class="friend-name"><a href="#">{{ fr.username }}</a></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </li1>
+
+    </ul1>
+</div>
+{% endblock %}

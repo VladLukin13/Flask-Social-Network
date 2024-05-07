@@ -1,0 +1,49 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+ul1 {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li1 {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.friend {
+    display: flex;
+    align-items: center;
+}
+.friend img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.friend-info {
+    flex: 1;
+}
+.friend-name {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+.friend-location {
+    color: #666;
+}
